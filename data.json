@@ -1,0 +1,21 @@
+[
+    {
+        "title": "xvideo",
+        "url": "https://xvideo.com/",
+        "content": "Aprende a implementar un motor de búsqueda básico en HTML, CSS y JavaScript.",
+        "date": "2024-08-19"
+    },
+    {
+        "title": "Guía de CSS avanzada",
+        "url": "https://example.com/css-guide",
+        "content": "Explora técnicas avanzadas de CSS para mejorar tus habilidades de diseño web.",
+        "date": "2024-07-22"
+    },
+    {
+        "title": "Introducción a JavaScript",
+        "url": "https://example.com/js-intro",
+        "content": "Este artículo cubre los fundamentos de JavaScript, el lenguaje de programación del navegador.",
+        "date": "2024-06-15"
+    }
+    // Puedes agregar más datos aquí
+]
