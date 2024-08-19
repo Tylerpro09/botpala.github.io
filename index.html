@@ -3,58 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Motor de Búsqueda de Cine</title>
+    <title>Motor de Búsqueda Avanzado</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
         }
-        .search-container {
-            text-align: center;
-            background-color: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-        }
-        input[type="text"] {
-            width: 80%;
-            padding: 10px;
-            margin-top: 20px;
+        .search-box {
             margin-bottom: 20px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            font-size: 16px;
         }
-        input[type="submit"] {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
+        .filters {
+            margin-bottom: 20px;
         }
-        input[type="submit"]:hover {
-            background-color: #45a049;
+        .result {
+            margin-bottom: 15px;
+        }
+        .result-title {
+            font-weight: bold;
+            color: #1a0dab;
+        }
+        .result-url {
+            color: #006621;
+            font-size: 12px;
+        }
+        #pagination button {
+            margin: 5px;
+            padding: 5px 10px;
         }
     </style>
 </head>
 <body>
+    <h1>Motor de Búsqueda Avanzado</h1>
+    
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Escribe tu búsqueda..." onkeyup="search()">
+    </div>
 
-<div class="search-container">
-    <h1>Busca Actividades de Cine</h1>
-    <form action="https://www.google.com/search" method="get">
-        <input type="text" name="q" placeholder="Ejemplo: Actividades de cine en Ciudad de México" required>
-        <input type="hidden" name="hl" value="es">
-        <input type="submit" value="Buscar">
-    </form>
-</div>
+    <div class="filters">
+        <label for="filter-date">Fecha:</label>
+        <input type="date" id="filter-date" onchange="search()">
+    </div>
 
+    <div id="results"></div>
+    <div id="pagination"></div>
+
+    <script src="search.js"></script>
 </body>
 </html>
